@@ -2,8 +2,9 @@ import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import { Nav } from "./Nav";
+import { Nav } from "./components/Nav";
 import { PageNotFound } from "./pages/PageNotFound";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </>
   );
 }
