@@ -6,7 +6,11 @@ export const Nav = () => {
       <nav>
         <Link to="/">
           {" "}
-          <img src={process.env.PUBLIC_URL + "kasa_logo.png"} id="logo" />
+          <img
+            src={process.env.PUBLIC_URL + "kasa_logo.png"}
+            id="logo"
+            alt="logo"
+          />
         </Link>
         <ul id="navlist">
           <li>

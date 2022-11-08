@@ -9,7 +9,7 @@ export const About = () => {
       <Hero image={image} />
       <div className="accordion">
         {accordion.map(({ title, content }) => (
-          <Accordion title={title} content={content} />
+          <Accordion title={title} content={content} key={title} />
         ))}
       </div>
     </>
