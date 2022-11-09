@@ -83,12 +83,15 @@ a:active {
   font-size: 2rem;
   font-weight: 400;
 }
-
+.about-accordion {
+  width: 80%;
+  margin: 2rem auto;
+}
 .accordion-item {
   margin: 0 auto;
+  width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  width: 80%;
 }
 .accordion-title {
   background-color: #ff6060;
@@ -186,8 +189,62 @@ a:active {
 
 .fa-star {
   color: #bdbdbd;
+  margin-right: 8px;
+  font-size: 20px;
 }
 
 .checked {
   color: #ff6060;
+}
+
+.logement-info {
+  color: #ff6060;
+}
+
+.logement-info title p {
+  font-size: 36px;
+  margin: 0;
+}
+.logement-tags {
+  display: flex;
+}
+.logement-tags p {
+  background-color: #ff6060;
+  font-size: 12px;
+  color: white;
+  width: auto;
+  height: 25;
+  padding: 10px;
+  margin: 0;
+  margin-right: 1rem;
+  border-radius: 20px;
+}
+
+.description-wrapper {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.description-wrapper p {
+  line-height: 1.4;
+}
+
+.logement-accordion {
+  width: 80%;
+}
+
+.host {
+  display: flex;
+  color: #ff6060;
+  align-items: center;
+}
+.host p {
+  font-size: 18px;
+}
+.host img {
+  border-radius: 50%;
+  width: 64px;
+  margin: 10px;
 }

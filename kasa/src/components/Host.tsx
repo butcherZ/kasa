@@ -6,7 +6,7 @@ type Props = {
 const Host = ({ name, image }: Props) => {
   return (
     <>
-      <div>
+      <div className="host">
         <p>{name}</p>
         <img src={image} alt="host" />
       </div>

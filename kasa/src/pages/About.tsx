@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
       <Hero image={image} />
-      <div className="accordion">
+      <div className="about-accordion">
         {accordion.map(({ title, content }) => (
           <Accordion title={title} content={content} key={title} />
         ))}

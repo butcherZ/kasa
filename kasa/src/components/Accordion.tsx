@@ -12,7 +12,7 @@ const inactiveStyle = {
 
 const renderContent = (content: any) => {
   if (Array.isArray(content)) {
-    return content.map((x) => <p>{x}</p>);
+    return content.map((x, index) => <p key={index}>{x}</p>);
   }
   return (
     <>

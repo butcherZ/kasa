@@ -44,15 +44,39 @@ export const Logement = () => {
       >
         <ImageSlider slides={pictures} />
       </div>
-      <div>{title}</div>
-      <div>{location}</div>
-      <Host name={host.name} image={host.picture} />
-      <Rate rating={rating} />
-      {tags.map((x) => {
-        return <div>{x}</div>;
-      })}
-      <Accordion title="description" content={description} />
-      <Accordion title="Amenities" content={Amenities} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          margin: "2rem 0",
+        }}
+      >
+        <div>
+          <div className="logement-info">
+            <h2>{title}</h2>
+            <p>{location}</p>
+          </div>
+          <div className="logement-tags">
+            {tags.map((x, index) => {
+              return <p key={index}>{x}</p>;
+            })}
+          </div>
+        </div>
+
+        <div>
+          <Host name={host.name} image={host.picture} />
+          <Rate rating={rating} />
+        </div>
+      </div>
+      <div className="description-wrapper">
+        <div className="logement-accordion" style={{ width: "50%" }}>
+          <Accordion title="description" content={description} />
+        </div>
+        <div className="logement-accordion" style={{ width: "50%" }}>
+          <Accordion title="Amenities" content={Amenities} />
+        </div>
+      </div>
     </>
   );
 };
