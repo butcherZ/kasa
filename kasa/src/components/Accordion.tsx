@@ -2,12 +2,23 @@ import React, { useState } from "react";
 
 type Props = {
   title: string;
-  content?: string;
+  content: string | string[];
 };
 
 const activeStyle = { animation: "inAnimation 0.6s ease-in" };
 const inactiveStyle = {
   animation: "outAnimation 0.6s ease-out",
+};
+
+const renderContent = (content: any) => {
+  if (Array.isArray(content)) {
+    return content.map((x) => <p>{x}</p>);
+  }
+  return (
+    <>
+      <p>{content}</p>
+    </>
+  );
 };
 
 const Accordion = ({ title, content }: Props) => {
@@ -29,7 +40,7 @@ const Accordion = ({ title, content }: Props) => {
             if (!isActive) setIsActive(false);
           }}
         >
-          <p>{content}</p>
+          {renderContent(content)}
         </div>
       )}
     </div>

@@ -1,7 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 import ImageSlider from "../components/ImageSlider";
+import Host from "../components/Host";
+import Rate from "../components/Rate";
+import Accordion from "../components/Accordion";
 
-type Host = {
+type HostT = {
   name: string;
   picture: string;
 };
@@ -11,7 +14,7 @@ type Data = {
   cover: string;
   pictures: string[];
   description: string;
-  host: Host;
+  host: HostT;
   rating: string;
   location: string;
   Amenities: string[];
@@ -19,9 +22,17 @@ type Data = {
 };
 
 export const Logement = () => {
-  const data = useLoaderData() as Data;
+  const {
+    title,
+    pictures,
+    description,
+    host,
+    rating,
+    location,
+    Amenities,
+    tags,
+  } = useLoaderData() as Data;
 
-  console.log("data is", data);
   return (
     <>
       <div
@@ -31,8 +42,17 @@ export const Logement = () => {
           margin: "0 auto",
         }}
       >
-        <ImageSlider slides={data.pictures} />
+        <ImageSlider slides={pictures} />
       </div>
+      <div>{title}</div>
+      <div>{location}</div>
+      <Host name={host.name} image={host.picture} />
+      <Rate rating={rating} />
+      {tags.map((x) => {
+        return <div>{x}</div>;
+      })}
+      <Accordion title="description" content={description} />
+      <Accordion title="Amenities" content={Amenities} />
     </>
   );
 };
