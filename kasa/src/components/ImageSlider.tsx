@@ -53,7 +53,7 @@ const ImageSlider = ({ slides }: Props) => {
     setCurrentIndex(newIndex);
   };
   return (
-    <div style={sliderStyles}>
+    <div style={sliderStyles} id="slider">
       {slides.length && (
         <>
           <div style={leftArrowStyles} onClick={goToPrevious}>
@@ -64,7 +64,7 @@ const ImageSlider = ({ slides }: Props) => {
           </div>
         </>
       )}
-      <div style={slideStyles}></div>
+      <div style={slideStyles} id="slide"></div>
     </div>
   );
 };

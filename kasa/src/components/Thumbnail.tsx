@@ -9,8 +9,6 @@ export const Thumbnail = ({ title, location, image }: Props) => {
     <div
       style={{
         backgroundImage: `linear-gradient(to top, rgba(255,96,96,1), rgba(255,96,96,0) 50%), url('${image}')`,
-        height: 340,
-        width: 340,
         objectFit: "cover",
         borderRadius: 10,
         backgroundPosition: "center",

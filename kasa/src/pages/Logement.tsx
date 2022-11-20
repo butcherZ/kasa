@@ -45,6 +45,7 @@ export const Logement = () => {
         <ImageSlider slides={pictures} />
       </div>
       <div
+        className="info-wrapper"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -52,7 +53,7 @@ export const Logement = () => {
           margin: "2rem 0",
         }}
       >
-        <div>
+        <div style={{ width: "100%" }}>
           <div className="logement-info">
             <h2>{title}</h2>
             <p>{location}</p>
@@ -64,16 +65,16 @@ export const Logement = () => {
           </div>
         </div>
 
-        <div>
+        <div id="host-rate">
           <Host name={host.name} image={host.picture} />
           <Rate rating={rating} />
         </div>
       </div>
       <div className="description-wrapper">
-        <div className="logement-accordion" style={{ width: "50%" }}>
+        <div className="logement-accordion">
           <Accordion title="description" content={description} />
         </div>
-        <div className="logement-accordion" style={{ width: "50%" }}>
+        <div className="logement-accordion">
           <Accordion title="Amenities" content={Amenities} />
         </div>
       </div>

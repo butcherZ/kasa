@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import arrowUp from "../image/arrowUp.png";
+import arrowDown from "../image/arrowDown.png";
 
 type Props = {
   title: string;
@@ -31,6 +33,11 @@ const Accordion = ({ title, content }: Props) => {
         onClick={() => setIsActive(!isActive)}
       >
         <p>{title}</p>
+        {isActive ? (
+          <img src={arrowUp} alt="arrow up" style={{ width: "16px" }} />
+        ) : (
+          <img src={arrowDown} alt="arrow down" style={{ width: "16px" }} />
+        )}
       </button>
       {isActive && (
         <div
