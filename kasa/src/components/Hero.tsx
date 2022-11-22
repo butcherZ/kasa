@@ -5,15 +5,9 @@ type Props = {
 export const Hero = ({ text, image }: Props) => {
   return (
     <div
+      id="hero"
       style={{
         backgroundImage: `url('${image}')`,
-        height: 200,
-        width: "100%",
-        borderRadius: 20,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        position: "relative",
       }}
     >
       <h1 className="hero-text">{text}</h1>
